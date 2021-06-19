@@ -7,13 +7,13 @@ public class Testcase2 {
 	
 	
 	
-	@Test(priority=3 ,description= "Homepage 2 Test ")
+	@Test(priority=3 ,groups= {"Sanity"},description= "Homepage 2 Test ")
 	public void HomePage1() {
 		
 		System.out.println("HomePage2");
-	}
+	} 
 	
-	@Test(priority=0, description= "Homepage 1 Test ")
+	@Test(priority=0, description= "Homepage 1 Test ",dependsOnMethods = "HomePage1")
 	public void HomePage2() {
 		
 		System.out.println("HomePage1");
