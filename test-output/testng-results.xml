@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="70" started-at="2021-06-19T06:05:09 UTC" finished-at="2021-06-19T06:05:09 UTC">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="70" started-at="2021-06-19T06:05:09 UTC" finished-at="2021-06-19T06:05:09 UTC">
+      <class name="Test.Testcase2">
+        <test-method status="PASS" signature="HomePage2()[pri:0, instance:Test.Testcase2@3b084709]" name="HomePage2" duration-ms="12" started-at="2021-06-19T06:05:09 UTC" description="Homepage 1 Test " finished-at="2021-06-19T06:05:09 UTC">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HomePage2 -->
+        <test-method status="PASS" signature="HomePage3()[pri:1, instance:Test.Testcase2@3b084709]" name="HomePage3" duration-ms="1" started-at="2021-06-19T06:05:09 UTC" description="Homepage 3 Test " finished-at="2021-06-19T06:05:09 UTC">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HomePage3 -->
+        <test-method status="PASS" signature="HomePage4()[pri:2, instance:Test.Testcase2@3b084709]" name="HomePage4" duration-ms="1" started-at="2021-06-19T06:05:09 UTC" description="Homepage 4 Test " finished-at="2021-06-19T06:05:09 UTC">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HomePage4 -->
+        <test-method status="PASS" signature="HomePage1()[pri:3, instance:Test.Testcase2@3b084709]" name="HomePage1" duration-ms="1" started-at="2021-06-19T06:05:09 UTC" description="Homepage 2 Test " finished-at="2021-06-19T06:05:09 UTC">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HomePage1 -->
+      </class> <!-- Test.Testcase2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
