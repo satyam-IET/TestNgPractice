@@ -2,16 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4597" started-at="2021-06-19T06:30:42 UTC" finished-at="2021-06-19T06:30:47 UTC">
+  <suite name="Suite" duration-ms="4994" started-at="2021-06-19T07:18:14 UTC" finished-at="2021-06-19T07:18:19 UTC">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4597" started-at="2021-06-19T06:30:42 UTC" finished-at="2021-06-19T06:30:47 UTC">
+    <test name="Test" duration-ms="4994" started-at="2021-06-19T07:18:14 UTC" finished-at="2021-06-19T07:18:19 UTC">
       <class name="Test.Logintest">
-        <test-method status="PASS" signature="test1()[pri:0, instance:Test.Logintest@2a17b7b6]" name="test1" duration-ms="4546" started-at="2021-06-19T06:30:42 UTC" description="Verify User is able to click on login button" finished-at="2021-06-19T06:30:47 UTC">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:Test.Logintest@3fd7a715]" name="Setup" is-config="true" duration-ms="1806" started-at="2021-06-19T07:18:14 UTC" finished-at="2021-06-19T07:18:16 UTC">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="test1(java.lang.String,java.lang.String)[pri:0, instance:Test.Logintest@3fd7a715]" name="test1" duration-ms="3109" started-at="2021-06-19T07:18:16 UTC" description="Verify User is able to click on login button" finished-at="2021-06-19T07:18:19 UTC">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abc@xyz.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
       </class> <!-- Test.Logintest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -2,18 +2,21 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
-  <groups>
+  <parameter name="username" value="abc@xyz.com"/>
+  <parameter name="password" value="abc123"/>
+  <!-- <groups>
   
    <run>
    <include name="Sanity"></include>
    
    </run>
   
-  </groups>
+  </groups> -->
     <classes>
-      <class name="Test.Testcase1">
       
-      </class>
+      <class name="Test.Logintest"/>
+      
+     
       
     </classes>
   </test> <!-- Test -->

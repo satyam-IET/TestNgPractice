@@ -6,17 +6,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class Logintest {
 	
-	@Test(priority=0 , description = "Verify User is able to click on login button")
-	public void test1() {
+	WebDriver driver;
+	@BeforeMethod
+	public void Setup() {
 		
-       System.setProperty("webdriver.chrome.driver", "chromedriver");
-		
-		
-		WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
 		
 		driver.get("https://simplilearn.com/");
 		
@@ -27,6 +27,12 @@ public class Logintest {
 		//To wait for 5 sec in every page
 		
 		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+	}
+	
+	@Test(priority=0 , description = "Verify User is able to click on login button")
+	@Parameters({"username","password"})
+	public void test1(String usrnm , String Pass) {
+		
 		
 		// To click on any tab
 		
@@ -34,7 +40,32 @@ public class Logintest {
 		
 		LoginLink.click();
 		
+
+		//to enter email / to enter any name in webpage
 		
-	}
+		WebElement UserName = driver.findElement(By.name("user_login"));
+		
+		UserName.sendKeys(usrnm);
+		
+		// Enter Password
+		
+		WebElement UserPassword = driver.findElement(By.name("user_pwd"));
+		
+		UserPassword.sendKeys(Pass);
+		
+		//Click on Remember me check box
+		
+		WebElement RememberMe =driver.findElement(By.className("rememberMe"));
+		RememberMe.click();
+		
+		WebElement LoginName = driver.findElement(By.name("btn_login"));
+		LoginName.click();
+		
+		driver.close();
+		
+		
+		}
+	
+	
 
 }
