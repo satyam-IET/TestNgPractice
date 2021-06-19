@@ -1,29 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="70" started-at="2021-06-19T06:05:09 UTC" finished-at="2021-06-19T06:05:09 UTC">
+  <suite name="Default suite" duration-ms="4597" started-at="2021-06-19T06:30:42 UTC" finished-at="2021-06-19T06:30:47 UTC">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="70" started-at="2021-06-19T06:05:09 UTC" finished-at="2021-06-19T06:05:09 UTC">
-      <class name="Test.Testcase2">
-        <test-method status="PASS" signature="HomePage2()[pri:0, instance:Test.Testcase2@3b084709]" name="HomePage2" duration-ms="12" started-at="2021-06-19T06:05:09 UTC" description="Homepage 1 Test " finished-at="2021-06-19T06:05:09 UTC">
+    <test name="Default test" duration-ms="4597" started-at="2021-06-19T06:30:42 UTC" finished-at="2021-06-19T06:30:47 UTC">
+      <class name="Test.Logintest">
+        <test-method status="PASS" signature="test1()[pri:0, instance:Test.Logintest@2a17b7b6]" name="test1" duration-ms="4546" started-at="2021-06-19T06:30:42 UTC" description="Verify User is able to click on login button" finished-at="2021-06-19T06:30:47 UTC">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePage2 -->
-        <test-method status="PASS" signature="HomePage3()[pri:1, instance:Test.Testcase2@3b084709]" name="HomePage3" duration-ms="1" started-at="2021-06-19T06:05:09 UTC" description="Homepage 3 Test " finished-at="2021-06-19T06:05:09 UTC">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePage3 -->
-        <test-method status="PASS" signature="HomePage4()[pri:2, instance:Test.Testcase2@3b084709]" name="HomePage4" duration-ms="1" started-at="2021-06-19T06:05:09 UTC" description="Homepage 4 Test " finished-at="2021-06-19T06:05:09 UTC">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePage4 -->
-        <test-method status="PASS" signature="HomePage1()[pri:3, instance:Test.Testcase2@3b084709]" name="HomePage1" duration-ms="1" started-at="2021-06-19T06:05:09 UTC" description="Homepage 2 Test " finished-at="2021-06-19T06:05:09 UTC">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePage1 -->
-      </class> <!-- Test.Testcase2 -->
+        </test-method> <!-- test1 -->
+      </class> <!-- Test.Logintest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
