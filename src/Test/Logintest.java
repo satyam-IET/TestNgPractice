@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -60,6 +61,15 @@ public class Logintest {
 		
 		WebElement LoginName = driver.findElement(By.name("btn_login"));
 		LoginName.click();
+		
+		WebElement Error =driver.findElement(By.id("msg_box"));
+		String Actmsg = Error.getText();
+		
+		String expectmsg = "The email or password you have entered  invalid.";
+		
+		Assert.assertTrue(Error.isDisplayed());
+		Assert.assertEquals(Actmsg , expectmsg);
+
 		
 		driver.close();
 		
