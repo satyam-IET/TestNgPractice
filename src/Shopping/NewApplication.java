@@ -7,7 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentReports;
@@ -16,7 +18,7 @@ public class NewApplication {
 	
 	WebDriver driver;
 
-	@BeforeMethod
+	@BeforeTest
 	public void Setup() {
 		
         driver = new ChromeDriver();
@@ -49,14 +51,14 @@ public class NewApplication {
 	@Test(priority =1 , description = "Verify user is able to select item to cart" ,dependsOnMethods = "Logintest")
 	public void selectcart() {
 		
-		WebElement username = driver.findElement(By.xpath("//*[@name='user-name']"));
+		/*WebElement username = driver.findElement(By.xpath("//*[@name='user-name']"));
 	    username.sendKeys("standard_user");
 	    
 	    WebElement password = driver.findElement(By.xpath("//*[@name='password']"));
 	    password.sendKeys("secret_sauce");
 	    
 	    WebElement login = driver.findElement(By.xpath("//*[@id='login-button']"));
-	    login.click();
+	    login.click(); */
 		
 		WebElement select = driver.findElement(By.xpath("//*[@name='add-to-cart-sauce-labs-backpack']"));
 		select.click();
@@ -68,7 +70,7 @@ public class NewApplication {
 	@Test(priority = 3 , description ="verify user is able to clcik on cart", dependsOnMethods = "selectcart")
 	public void Opencart() {
 		
-		WebElement username = driver.findElement(By.xpath("//*[@name='user-name']"));
+		/*WebElement username = driver.findElement(By.xpath("//*[@name='user-name']"));
 	    username.sendKeys("standard_user");
 	    
 	    WebElement password = driver.findElement(By.xpath("//*[@name='password']"));
@@ -78,14 +80,14 @@ public class NewApplication {
 	    login.click();
 		
 		WebElement select = driver.findElement(By.xpath("//*[@name='add-to-cart-sauce-labs-backpack']"));
-		select.click();
+		select.click(); */
 		
 		WebElement cart = driver.findElement(By.className("shopping_cart_link"));
 		cart.click();
 		
 	}
 	
-	@AfterMethod
+	@AfterTest
 	public void teardown() {
 		driver.quit();
 	}

@@ -8,6 +8,8 @@
           <include name="Logintest"/>
           <include name="selectcart"/>
           <include name="Setup"/>
+          <include name="teardown"/>
+          <include name="Opencart"/>
         </methods>
       </class> <!-- Shopping.NewApplication -->
     </classes>
