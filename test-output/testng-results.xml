@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2035" started-at="2021-06-20T07:00:16 UTC" finished-at="2021-06-20T07:00:18 UTC">
+  <suite name="Suite" duration-ms="7032" started-at="2021-06-26T04:02:06 UTC" finished-at="2021-06-26T04:02:13 UTC">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2035" started-at="2021-06-20T07:00:16 UTC" finished-at="2021-06-20T07:00:18 UTC">
-      <class name="Shopping.NewApplication">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:Shopping.NewApplication@2f943d71]" name="Setup" is-config="true" duration-ms="1213" started-at="2021-06-20T07:00:16 UTC" finished-at="2021-06-20T07:00:17 UTC">
+    <test name="Test" duration-ms="7032" started-at="2021-06-26T04:02:06 UTC" finished-at="2021-06-26T04:02:13 UTC">
+      <class name="Test.Logintest">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:Test.Logintest@4b1c1ea0]" name="Setup" is-config="true" duration-ms="2832" started-at="2021-06-26T04:02:06 UTC" finished-at="2021-06-26T04:02:09 UTC">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="Logintest()[pri:0, instance:Shopping.NewApplication@2f943d71]" name="Logintest" duration-ms="387" started-at="2021-06-20T07:00:17 UTC" description="verify user is able to login" finished-at="2021-06-20T07:00:17 UTC">
+        <test-method status="PASS" signature="test1(java.lang.String,java.lang.String)[pri:0, instance:Test.Logintest@4b1c1ea0]" name="test1" duration-ms="3825" started-at="2021-06-26T04:02:09 UTC" description="Verify User is able to click on login button" finished-at="2021-06-26T04:02:13 UTC">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abc@xyz.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Logintest -->
-        <test-method status="PASS" signature="selectcart()[pri:1, instance:Shopping.NewApplication@2f943d71]" name="selectcart" duration-ms="247" started-at="2021-06-20T07:00:17 UTC" description="Verify user is able to select item to cart" depends-on-methods="Shopping.NewApplication.Logintest" finished-at="2021-06-20T07:00:17 UTC">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectcart -->
-        <test-method status="PASS" signature="Opencart()[pri:3, instance:Shopping.NewApplication@2f943d71]" name="Opencart" duration-ms="76" started-at="2021-06-20T07:00:17 UTC" description="verify user is able to clcik on cart" depends-on-methods="Shopping.NewApplication.selectcart" finished-at="2021-06-20T07:00:18 UTC">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Opencart -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Shopping.NewApplication@2f943d71]" name="teardown" is-config="true" duration-ms="70" started-at="2021-06-20T07:00:18 UTC" finished-at="2021-06-20T07:00:18 UTC">
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Test.Logintest@4b1c1ea0]" name="teardown" is-config="true" duration-ms="339" started-at="2021-06-26T04:02:13 UTC" finished-at="2021-06-26T04:02:13 UTC">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- Shopping.NewApplication -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- Test.Logintest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
