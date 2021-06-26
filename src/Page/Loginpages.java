@@ -3,6 +3,8 @@ package Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.relevantcodes.extentreports.ExtentReports;
@@ -16,19 +18,43 @@ public class Loginpages {
 	WebDriver driver;
 	ExtentReports reports;
 	ExtentTest test;
+// ==================================WebElements===================================
 	
+	@FindBy(linkText="Log in")
+	WebElement LoginLink;
+	
+	@FindBy(name="user_login")
+	WebElement UserName;
+	
+	@FindBy(name="user_pwd")
+	WebElement UserPassword;
+	
+	@FindBy(className="rememberMe")
+	WebElement RememberMe;
+	
+	@FindBy(name="btn_login")
+	WebElement LoginName;
+	
+	@FindBy(id="msg_box")
+	WebElement Error;
+	
+	
+	
+// ===============================Constructor ====================================	
 public Loginpages() {
 	
 	driver = Logintest.driver;
 	reports = Logintest.reports;
 	test = Logintest.test;
+	PageFactory.initElements(driver, this);
+
 			
 	
 }
 	
 	
 	
-
+//================ Methods ========================================
 	
 public void Login(String usrnm , String Pass) {
 		
@@ -37,7 +63,7 @@ public void Login(String usrnm , String Pass) {
 		
 		// To click on any tab
 		
-		WebElement LoginLink = driver.findElement(By.linkText("Log in"));
+		//WebElement LoginLink = driver.findElement(By.linkText("Log in"));
 		
 		LoginLink.click();
 		
@@ -47,7 +73,7 @@ public void Login(String usrnm , String Pass) {
 
 		//to enter email / to enter any name in webpage
 		
-		WebElement UserName = driver.findElement(By.name("user_login"));
+		//WebElement UserName = driver.findElement(By.name("user_login"));
 		
 		UserName.sendKeys(usrnm);
 		
@@ -56,7 +82,7 @@ public void Login(String usrnm , String Pass) {
 		
 		// Enter Password
 		
-		WebElement UserPassword = driver.findElement(By.name("user_pwd"));
+		//WebElement UserPassword = driver.findElement(By.name("user_pwd"));
 		
 		UserPassword.sendKeys(Pass);
 		
@@ -65,19 +91,19 @@ public void Login(String usrnm , String Pass) {
 		
 		//Click on Remember me check box
 		
-		WebElement RememberMe =driver.findElement(By.className("rememberMe"));
+		//WebElement RememberMe =driver.findElement(By.className("rememberMe"));
 		RememberMe.click();
 		
 		test.log(LogStatus.PASS, "Successfully clicked on remember me checkbox");
 
 		
-		WebElement LoginName = driver.findElement(By.name("btn_login"));
+		//WebElement LoginName = driver.findElement(By.name("btn_login"));
 		LoginName.click();
 		
 		test.log(LogStatus.PASS, "Successfully clicked on login button");
 
 		
-		WebElement Error =driver.findElement(By.id("msg_box"));
+		//WebElement Error =driver.findElement(By.id("msg_box"));
 		String Actmsg = Error.getText();
 		
 		String expectmsg = "The email or password you have entered is invalid.";
