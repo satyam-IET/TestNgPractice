@@ -38,8 +38,6 @@ public class Loginpages {
 	@FindBy(id="msg_box")
 	WebElement Error;
 	
-	
-	
 // ===============================Constructor ====================================	
 public Loginpages() {
 	
@@ -47,12 +45,7 @@ public Loginpages() {
 	reports = Logintest.reports;
 	test = Logintest.test;
 	PageFactory.initElements(driver, this);
-
-			
-	
 }
-	
-	
 	
 //================ Methods ========================================
 	
@@ -60,38 +53,26 @@ public void Login(String usrnm , String Pass) {
 		
 		test = reports.startTest("Login Test Case");
 		
-		
-		// To click on any tab
-		
-		//WebElement LoginLink = driver.findElement(By.linkText("Log in"));
+		// To click on Login Button
 		
 		LoginLink.click();
 		
 		test.log(LogStatus.PASS, "Successfully clicked on the login button");
 
+	    //to enter email / to enter any name in webpage
 		
-
-		//to enter email / to enter any name in webpage
-		
-		//WebElement UserName = driver.findElement(By.name("user_login"));
-		
-		UserName.sendKeys(usrnm);
+	    UserName.sendKeys(usrnm);
 		
 		test.log(LogStatus.PASS, "Successfully Entered Username");
 
-		
 		// Enter Password
-		
-		//WebElement UserPassword = driver.findElement(By.name("user_pwd"));
 		
 		UserPassword.sendKeys(Pass);
 		
 		test.log(LogStatus.PASS, "Successfully Entered Username");
 
+	    //Click on Remember me check box
 		
-		//Click on Remember me check box
-		
-		//WebElement RememberMe =driver.findElement(By.className("rememberMe"));
 		RememberMe.click();
 		
 		test.log(LogStatus.PASS, "Successfully clicked on remember me checkbox");
@@ -101,9 +82,9 @@ public void Login(String usrnm , String Pass) {
 		LoginName.click();
 		
 		test.log(LogStatus.PASS, "Successfully clicked on login button");
-
 		
-		//WebElement Error =driver.findElement(By.id("msg_box"));
+		// Check Error Message
+		
 		String Actmsg = Error.getText();
 		
 		String expectmsg = "The email or password you have entered is invalid.";
